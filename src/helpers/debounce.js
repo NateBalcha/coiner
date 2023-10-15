@@ -5,7 +5,10 @@ export default function debounce(func, wait, immediate) {
       args = arguments;
     var later = function () {
       timeout = null;
-      if (!immediate) func.apply(context, args);
+      if (!immediate) {
+        func.apply(context, args);
+        // console.log("works");
+      }
     };
     var callNow = immediate && !timeout;
     clearTimeout(timeout);

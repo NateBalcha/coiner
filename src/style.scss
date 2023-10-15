@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary: #118c4f;
+    --background: #f5f8ff;
+}
+
+.primary {
+    color: var(--primary);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,26 +16,50 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #ebebf8;
-   
+    font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    outline: none;
-    display: block;
-    width: 100%;
-    border-radius: 0;
+    padding: 12px 32px;
+    border: 1px solid #118c4f;
+    background: transparent;
+    border-radius: 24px 4px;
+    font-size: 1rem;
+    margin-right: 0.8rem;
+    font-family: "Poppins", sans-serif;
 }
 
 a {
     text-decoration: none;
+    color: #333;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+}
+
+.btn {
+    padding: 14px 32px;
+    border: 1px solid #118c4f;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 24px 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
 }
 
 img {
@@ -32,10 +67,77 @@ img {
     display: block;
 }
 
+// text style
+.hero .left {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+// hero css
+.hero .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hero .left {
+    padding: 1rem;
+}
+
+.hero h1 {
+    padding: 1rem 0;
+}
+
+.hero .input-container {
+    padding: 1rem 0;
+}
+
+.hero .right {
+    padding: 1rem;
+}
+
+.hero .img-container {
+    width: 100%;
+    display: flex;
+}
+
+.hero img {
+    max-width: 90%;
+    margin: auto;
+}
+
 .width{
     max-width: 700px;
     margin: 0 auto;
     width: 92%;
+        h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
 }
 
 .header {
@@ -72,19 +174,49 @@ img {
 
 .home-search {
     padding: 40px 0;
-    text-align: center;
 
     h2{
         font-size: 26px;
         margin-bottom: 20px;
     }
 
-    input{
-        border: 1px solid #ddd;
-        padding: 0 24px;
-        border-radius: 8px;
-        line-height: 54px;
-    }
+}
+
+// sign-up
+.signup .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.signup .left {
+    text-align: center;
+}
+
+.signup img {
+    width: 300px;
+}
+
+.signup img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.signup .right p {
+    margin: 2rem 0;
+}
+
+// coin search
+.coinSearch{
+    border: 1px solid #118c4f;
+    padding: 0 24px;
+    border-radius: 8px;
+    line-height: 54px;
+    width: 700px;
+
+    
 }
 
 @keyframes rotating {
@@ -120,12 +252,7 @@ img {
 
 .home-cryptos {
     padding-bottom: 60px;
-    h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+
 }
 
 .home-cryptos-list {
@@ -139,7 +266,7 @@ img {
         align-items: center;
         padding: 20px 0;
         border-bottom: 1px solid #ddd;
-        width: 700px;
+        // width: 700px;
     }
 
    span {
@@ -242,7 +369,26 @@ h3 {
 }
 
 /* Add this CSS for small screens (e.g., mobile devices) */
+
+@media screen and (max-width: 940px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+          .signup .container {
+              grid-template-columns: 1fr;
+          }
+}
+
 @media (max-width: 768px) {
+    .btn {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    input {
+        width: 100%;
+    }
+
     .home-crypto {
         width: 100%;
         padding: 0;
@@ -255,16 +401,19 @@ h3 {
         /* Center align the content */
     }
 
-    // .home-crypto-rank {
-    //     font-size: 13px;
-    // }
+    .coinSearch{
+        width: 360px;
+        align-items: center;
+        
+    }
 
     .ranking {
         font-size: small;
     }
 
+
     .home-crypto-image {
-        width: 33px;
+        width: 35px;
         /* Increase image width for better visibility */
         margin-bottom: 10px;
         /* Add some spacing between image and other elements */
@@ -274,17 +423,14 @@ h3 {
         max-width: 100px;
         font-size: 13px;
 
-        /* Reduce font size for smaller screens */
     }
 
     .home-crypto-btc {
         font-size: 12px;
-        /* Reduce font size for smaller screens */
     }
 
     .home-crypto-usd {
         font-size: 10px;
-        /* Reduce font size for smaller screens */
     }
     .home-crypto-title{
         font-size: 12px;
@@ -298,5 +444,33 @@ h3 {
     .home-crypto-prices{
         margin-left: 0;
     }
+          h1 {
+              font-size: 2.1rem;
+              line-height: 1.2;
+          }
+    
+          h2 {
+              font-size: 1.5rem;
+              line-height: 1.2;
+          }
+    
+          h5 {
+              font-size: 1.1rem;
+              line-height: 1.2;
+          }
+    
+          p {
+              font-size: 1rem;
+          }
+    
+          .btn {
+              width: 100%;
+              margin: 1rem 0;
+          }
+    
+          input {
+              width: 100%;
+          }
+    
 
 }
