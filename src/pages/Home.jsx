@@ -21,9 +21,9 @@ export default function Home() {
           <div className="container">
             {/* Left Side */}
             <div className="left">
-              <p>Buy & Sell Crypto 24/7 using your retirement account</p>
-              <h1>Invest in Cryptocurreny with Your IRA</h1>
-              <p>Buy, Sell, and store hundreds of cryptocurrencies</p>
+              <p>Take a quick look at the current trending coins</p>
+              <h1>Search, Study, and Aquire any coin on the market 24/7</h1>
+              <p>Compare coins performance over the past 24 hours</p>
               <div className="input-container">
                 <input type="email" placeholder="Enter your email" />
                 <button className="btn">Learn More</button>
@@ -41,7 +41,7 @@ export default function Home() {
         {/* sign-up */}
 
         <div className="width">
-          <h2>Search for a coin</h2>
+          <h2>Search For a Coin</h2>
 
           {/* searching icon and searching bar  */}
           <div
